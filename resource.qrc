@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/image/abs.png</file>
+        <file>resource/image/abs_error.png</file>
+        <file>resource/image/emergency.png</file>
+        <file>resource/image/enginer.png</file>
+        <file>resource/image/enginer_error.png</file>
+        <file>resource/image/horn_off.png</file>
+        <file>resource/image/horn_on.png</file>
+        <file>resource/image/oil.png</file>
+        <file>resource/image/oil_error.png</file>
+        <file>resource/image/park_error.png</file>
+        <file>resource/image/safety.png</file>
+        <file>resource/image/safety_error.png</file>
+        <file>resource/image/snow.png</file>
+        <file>resource/image/snow_error.png</file>
+        <file>resource/image/steerwheel.png</file>
+        <file>resource/image/vehicle_left_light_on.png</file>
+        <file>resource/image/vehicle_right_light_on.png</file>
+    </qresource>
+</RCC>
