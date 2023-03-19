@@ -18,6 +18,8 @@ public:
 private slots:
     void on_cbx_horn_state_stateChanged(int arg1);
 
+    void on_cbx_direction_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
 };

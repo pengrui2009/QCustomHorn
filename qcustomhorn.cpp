@@ -45,8 +45,8 @@ void QCustomHorn::paintEvent(QPaintEvent *)
 
     drawBackground(&painter);
 
-    drawHorn(&painter);
-
+//    drawHorn(&painter);
+    drawVehicleHorn(&painter);
 
 //    drawTitle(&painter);
 
@@ -139,6 +139,40 @@ void QCustomHorn::drawHorn(QPainter *painter)
     painter->restore();
 }
 
+void QCustomHorn::drawVehicleHorn(QPainter *painter)
+{
+    int width = this->width();
+    int height = this->height();
+    int side = qMin(width, height);
+    QRectF target(-128.0, -83.0, 256.0, 165.0);
+
+    painter->save();
+
+    if (m_horn_active_)
+    {
+        QImage image(":/resource/image/horn_on.png");
+        if (m_dir_ == HORNDIR_LEFT)
+        {
+            painter->drawImage(target, image.mirrored(true, false));
+        } else {
+            painter->drawImage(target, image);
+        }
+
+    } else {
+        QImage image(":/resource/image/horn_off.png");
+        if (m_dir_ == HORNDIR_LEFT)
+        {
+            painter->drawImage(target, image.mirrored(true, false));
+        } else {
+            painter->drawImage(target, image);
+        }
+
+    }
+
+
+    painter->restore();
+}
+
 void QCustomHorn::setHornState(const bool value)
 {
     if (this->m_horn_active_ != value)
@@ -148,3 +182,11 @@ void QCustomHorn::setHornState(const bool value)
     }
 }
 
+void QCustomHorn::setHornDir(const HornDir value)
+{
+    if (this->m_dir_ != value)
+    {
+        this->m_dir_ = value;
+        this->update();
+    }
+}
