@@ -6,8 +6,8 @@
 
 /**
  * @brief Feature:
- * Support
- * Support
+ * Support Horn Active/DisActive
+ * Support Horn Direction
  * Support
  * Support
  */
